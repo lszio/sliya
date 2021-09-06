@@ -6,6 +6,8 @@ authors = ["Liszt21 <1832666492@qq.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+fastapi = "^0.68.1"
+uvicorn = {extras = ["standard"], version = "^0.15.0"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
