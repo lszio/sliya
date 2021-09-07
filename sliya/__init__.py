@@ -8,7 +8,8 @@ from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 from pydantic import BaseModel
-import uvicorn
+
+from .__main__ import run_dev_server
 
 SECRET_KEY = "secret"
 ALGORITHM = "HS256"
@@ -153,8 +154,3 @@ async def read_users_me(current_user: User = Depends(get_current_active_user)):
 @app.get("/users/me/items/")
 async def read_own_items(current_user: User = Depends(get_current_active_user)):
     return [{"item_id": "Foo", "owner": current_user.username}]
-
-
-def run_dev_server():
-    uvicorn.run("sliya:app", host="localhost",
-                port=9715, log_level="debug", debug=True)
