@@ -8,9 +8,14 @@ authors = ["Liszt21 <1832666492@qq.com>"]
 python = "^3.8"
 fastapi = "^0.68.1"
 uvicorn = {extras = ["standard"], version = "^0.15.0"}
+python-multipart = "^0.0.5"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
+flake8 = "^3.9.2"
+autopep8 = "^1.5.7"
 
 [tool.poetry.scripts]
 dev = "sliya:run_dev_server"
