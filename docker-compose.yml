@@ -3,6 +3,6 @@ services:
   sliya:
     build: .
     ports:
-      - "9715:9715"
+      - "80:9715"
     volumes:
       - "./:/sliya"
