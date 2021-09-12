@@ -1,0 +1,8 @@
+version: "3"
+services:
+  sliya:
+    build: .
+    ports:
+      - "9715:9715"
+    volumes:
+      - "./:/sliya"
