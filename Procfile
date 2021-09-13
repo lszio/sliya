@@ -1,0 +1,1 @@
+web: uvicorn sliya:app
