@@ -13,8 +13,9 @@ class Settings(BaseSettings):
     SERVER_HOST: str = "localhost"
     SERVER_PORT: int = 9715
     BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = [
-        "https://localhost",
-        "http://localhost:8000",
+        "http://localhost:3000",
+        "http://localhost:5000",
+        "https://liszt.space",
         "https://eliya.liszt.space"
     ]
 
